@@ -13,6 +13,6 @@ app.listen(3000, async () => {
     //     content: 'Third tweet',
     // });
     const tweetRepo = new TweetRepository();
-    const tweet = await tweetRepo.getWithComments('6832acae70f3a67bbfc596b6')
-    console.log(tweet);
+    const tweet = await tweetRepo.getAll(0, 4);
+    console.log(tweet[0].contentWithEmail);
 });  
