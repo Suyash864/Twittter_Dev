@@ -13,7 +13,7 @@ class CrudRepository {
         }
     }
 
-    async destory(id) {
+    async destroy(id) {
         try {
             const result = await this.model.findByIdAndDelete(id);
             return result;
@@ -33,9 +33,9 @@ class CrudRepository {
         }
     }
 
-    async getAll(id) {
+    async getAll() {
         try {
-            const result = await this.model.findById({});
+            const result = await this.model.find({});
             return result;
         } catch (error) {
             console.log("Something went wrong in crud repo");
