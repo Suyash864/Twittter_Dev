@@ -1,4 +1,5 @@
 import { LikeRepository, TweetRepository } from '../repository/index.js';
+import Tweet from '../models/tweet.js';
 
 class LikeService {
     constructor() {
